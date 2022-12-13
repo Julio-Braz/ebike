@@ -7,7 +7,7 @@ import bike from '../../img/bike.png'
 
 export default function MainBanner(){
     return(
-        <Box w='100%' h='300' mt='60px'>
+        <Box w='100%' h='300' mt='-6'>
             <ImageBackground source={slider} style={{flex:1, justifyContent:'center', alignItems:'center'}} resizeMode='contain'>
                 <Image source={bike} alt='image of a bike'/> 
             </ImageBackground>
