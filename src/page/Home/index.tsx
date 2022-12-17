@@ -6,6 +6,7 @@ import { Card } from '../../atomic/molecules/Card';
 import api from '../../service/api';
 import { FlatList } from 'react-native';
 import { Header } from '../../atomic/molecules/Header';
+import { CategoryList } from '../../atomic/organism/CategoryList';
 
 
 export type CardProps = {
@@ -41,6 +42,7 @@ export function Home() {
             <>
                 <Header text=' Choose your Bike' />
                 <MainBanner />
+                <CategoryList />
             </>
             }
             showsVerticalScrollIndicator={false}
