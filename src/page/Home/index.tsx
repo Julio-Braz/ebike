@@ -7,6 +7,7 @@ import api from '../../service/api';
 import { FlatList } from 'react-native';
 import { Header } from '../../atomic/molecules/Header';
 import { CategoryList } from '../../atomic/organism/CategoryList';
+import { useNavigation } from '@react-navigation/native';
 
 
 export type CardProps = {
@@ -19,6 +20,8 @@ export type CardProps = {
 };
 
 export function Home() {
+
+    const {navigate} = useNavigation()
 
     const [equipments, setEquipments] = useState<CardProps[]>([])
 
@@ -39,7 +42,9 @@ export function Home() {
 
     }, []);
     function handleRedirect(id:string){
-        alert(id);
+        navigate('Detail',{
+            equipmentId: id,
+        });
     }
 
     return <Box flex="1" padding="20px" pt="-10px" position="relative">
