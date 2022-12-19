@@ -10,11 +10,12 @@ export function Card({
     image,
     price,
     model,
-    title
+    title,
+    handleRedirect
 }: CardProps) {
     return <TouchableOpacity 
         style={{padding: 5, width: '50%', height: 240, opacity: 0.9}} 
-        onPress={() => {}}>
+        onPress={() => handleRedirect && handleRedirect(id)}>
             <Box borderRadius="20px"
                 p="4" flex="1" shadow="5" bg="primary.50:alpha.9"
                 justifyContent="center"

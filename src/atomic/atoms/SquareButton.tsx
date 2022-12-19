@@ -1,6 +1,5 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Center, useTheme } from 'native-base';
 import { Gradient } from './Gradient';
 
@@ -9,7 +8,7 @@ type Props ={
     isGradient?: boolean
 }
 
-export function GradientSquareButton ({isGradient = false , children} : Props){
+export function SquareButton ({isGradient = false , children} : Props){
     
     const {colors} = useTheme()
 

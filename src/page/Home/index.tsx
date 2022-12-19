@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from 'native-base';
 import { DetailBackground } from '../../atomic/atoms/DetailBackground';
-import MainBanner  from '../../atomic/molecules';
+import {MainBanner}  from '../../atomic/molecules/MainBanner';
 import { Card } from '../../atomic/molecules/Card';
 import api from '../../service/api';
 import { FlatList } from 'react-native';
@@ -15,7 +15,8 @@ export type CardProps = {
     model: string;
     image: string;
     id: string
-}
+    handleRedirect?: (id: string ) => void;
+};
 
 export function Home() {
 
@@ -33,7 +34,13 @@ export function Home() {
         }
 
         getEquipments()
-    }, [])
+
+        
+
+    }, []);
+    function handleRedirect(id:string){
+        alert(id);
+    }
 
     return <Box flex="1" padding="20px" pt="-10px" position="relative">
         <DetailBackground />
@@ -49,8 +56,15 @@ export function Home() {
             numColumns={2}
             keyExtractor={item => item.id}
             data={equipments}
-            renderItem={({item: equipment}) => <Card image={equipment.image} id={equipment.id}
-             model={equipment.model} price={equipment.price} title={equipment.title}/>}
+            renderItem={({item: equipment}) =>
+            
+                <Card
+                    handleRedirect={handleRedirect} 
+                    image={equipment.image} 
+                    id={equipment.id}
+                    model={equipment.model} 
+                    price={equipment.price} 
+                    title={equipment.title}/>}
          />
     </Box>
 }

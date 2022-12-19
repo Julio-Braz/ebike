@@ -1,6 +1,6 @@
 import { Box, HStack, Text, Image } from 'native-base';
 import React from 'react';
-import { GradientSquareButton } from '../atoms/GradientSquareButton';
+import { SquareButton } from '../atoms/SquareButton';
 
 import bike from '../../img/categories/subtract.png'
 import road from '../../img/categories/road.png'
@@ -13,34 +13,34 @@ export function CategoryList (){
         <Box width='100%' mb='20px' mt='5px' alignSelf='center' justifyContent='space-between'>
             <HStack justifyContent='space-between' width='95px'>
                 <Box ml='20px'>
-                    <GradientSquareButton isGradient>
+                    <SquareButton isGradient>
                         <Text color='white'>All</Text>
-                    </GradientSquareButton>
+                    </SquareButton>
                 </Box>
                 <Box ml='20px' mt='-10px'>
                 
-                    <GradientSquareButton isGradient= {false}>
+                    <SquareButton isGradient= {false}>
                         <Image source={bike} alt='icon of a bike' resizeMode='contain'/>
-                    </GradientSquareButton>
+                    </SquareButton>
                 </Box>
 
                 <Box ml='20px' mt='-20px'>
 
-                    <GradientSquareButton isGradient= {false}>
+                    <SquareButton isGradient= {false}>
                         <Image source={road} alt='icon of a road' resizeMode='contain'/>
-                    </GradientSquareButton>
+                    </SquareButton>
                 </Box>
                 
                 <Box ml='20px' mt='-30px'>
-                    <GradientSquareButton isGradient= {false}>
+                    <SquareButton isGradient= {false}>
                         <Image source={helmet} alt='icon of a helmet' resizeMode='contain'/>
-                    </GradientSquareButton>
+                    </SquareButton>
                 </Box>
 
                 <Box ml='20px' mt='-40px'>
-                    <GradientSquareButton isGradient= {false}>
+                    <SquareButton isGradient= {false}>
                         <Image source={mountain} alt='icon of a mountain' resizeMode='contain'/>
-                    </GradientSquareButton>
+                    </SquareButton>
                 </Box>
                 
             </HStack>

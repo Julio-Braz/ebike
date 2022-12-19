@@ -5,7 +5,7 @@ import { ImageBackground } from 'react-native';
 import slider from '../../img/slider.png';
 import bike from '../../img/bike.png'
 
-export default function MainBanner(){
+export function MainBanner(){
     return(
         <Box w='100%' h='300' mt='-6'>
             <ImageBackground source={slider} style={{flex:1, justifyContent:'center', alignItems:'center'}} resizeMode='contain'>
